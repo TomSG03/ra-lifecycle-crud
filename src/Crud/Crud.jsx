@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Head from './Head';
 import InputText from './InputText';
 import ShowCards from './ShowCards';
 
@@ -60,6 +61,7 @@ function Crud(props) {
 
   return (
     <>
+      <Head />
       <InputText handlerSend={send} handlerInput={handlerTextArea} text={textArea} />
       <ShowCards cards={cards} onDelete={handlerDelete} />
     </>
