@@ -20,7 +20,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://TomSG03.github.io/ra-composition-cards",
+  "homepage": "https://TomSG03.github.io/ra-lifecycle-crud",
   "eslintConfig": {
     "extends": [
       "react-app",
