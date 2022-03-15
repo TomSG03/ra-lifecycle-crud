@@ -12,6 +12,8 @@ function Head({handlerUpdate}) {
   )
 }
 
-Head.propTypes = {}
+Head.propTypes = {
+  handlerUpdate: PropTypes.func
+}
 
 export default Head

@@ -13,6 +13,10 @@ function InputText({ handlerSend, handlerInput, text }) {
   )
 }
 
-InputText.propTypes = {}
+InputText.propTypes = {
+  text: PropTypes.string,
+  handlerInput: PropTypes.func,
+  handlerSend: PropTypes.func
+}
 
 export default InputText

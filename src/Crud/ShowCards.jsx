@@ -21,6 +21,9 @@ function ShowCards({ cards, onDelete }) {
   )
 }
 
-ShowCards.propTypes = {}
+ShowCards.propTypes = {
+  cards: PropTypes.array,
+  onDelete: PropTypes.func
+}
 
 export default ShowCards

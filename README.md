@@ -3,8 +3,8 @@
 
 ## [Домашнее задание к лекции «Жизненный цикл и работа с HTTP»](https://github.com/TomSG03/ra16-homeworks/tree/master/lifecycle-http)
 
-- [ ] 
-- [ ] Crud
+- [x] [Мировые часы](https://github.com/TomSG03/ra-lifecycle-watches)
+- [x] Crud
 
 ---
 [Спискок задач](https://github.com/TomSG03/ra-homeworks-list)
