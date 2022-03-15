@@ -12,6 +12,7 @@ function Crud(props) {
     if (textArea === '') return
     setData(textArea);
     setTextArea('');
+    console.log('Send');
   }
 
   function sendData(params) {
@@ -44,10 +45,16 @@ function Crud(props) {
 
   function handlerDelete({ target }) {
     delData(target.dataset.id);
+    console.log('Delete');
   }
 
   function handlerTextArea({ target }) {
     setTextArea(target.value);
+  }
+
+  function handlerUpdate(params) {
+    loadData();
+    console.log('UpDate');
   }
 
   useEffect(() => {
@@ -61,9 +68,9 @@ function Crud(props) {
 
   return (
     <>
-      <Head />
-      <InputText handlerSend={send} handlerInput={handlerTextArea} text={textArea} />
+      <Head handlerUpdate={handlerUpdate}/>
       <ShowCards cards={cards} onDelete={handlerDelete} />
+      <InputText handlerSend={send} handlerInput={handlerTextArea} text={textArea} />
     </>
   )
 }
