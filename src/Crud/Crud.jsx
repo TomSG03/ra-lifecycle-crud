@@ -59,11 +59,13 @@ function Crud(props) {
 
   useEffect(() => {
     loadData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
     if (Object.keys(data).length === 0) return
     sendData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data])
 
   return (
