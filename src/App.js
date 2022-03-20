@@ -1,6 +1,6 @@
 import './App.css';
 
-import Crud from './Crud/Crud';
+import Crud from './Crud/CrudClass';
 
 function App() {
   // const url = 'http://localhost:7777/notes';

@@ -8,7 +8,7 @@ function ShowCards({ cards, onDelete }) {
         <div className='cards-content'>
           <span>{e.content}</span>
         </div>
-        <button className='btn-del material-icons' onClick={onDelete} data-id={e.id}>
+        <button className='btn-del material-icons' onClick={() => onDelete(e.id)}>
             close
         </button>
       </div>

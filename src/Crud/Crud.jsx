@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react'
 import Head from './Head';
 import InputText from './InputText';
@@ -5,17 +6,15 @@ import ShowCards from './ShowCards';
 
 function Crud(props) {
   const [cards, setCards] = useState([]);
-  const [textArea, setTextArea] = useState('');
-  const [data, setData] = useState({})
+  const [data, setData] = useState()
 
-  function send() {
-    if (textArea === '') return
-    setData(textArea);
-    setTextArea('');
-    console.log('Send');
+  function send(text) {
+    if (text === '') return
+    setData(text);
   }
 
-  function sendData(params) {
+  function sendData() {
+    if (data === '' || data === undefined) return
     fetch(props.url, {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
@@ -45,34 +44,27 @@ function Crud(props) {
 
   function handlerDelete({ target }) {
     delData(target.dataset.id);
-    console.log('Delete');
-  }
-
-  function handlerTextArea({ target }) {
-    setTextArea(target.value);
   }
 
   function handlerUpdate(params) {
     loadData();
-    console.log('UpDate');
   }
 
-  useEffect(() => {
-    loadData();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  const init = loadData;
 
   useEffect(() => {
-    if (Object.keys(data).length === 0) return
+    init();
+  }, [init])
+
+  useEffect(() => {
     sendData();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data])
 
   return (
     <>
       <Head handlerUpdate={handlerUpdate}/>
       <ShowCards cards={cards} onDelete={handlerDelete} />
-      <InputText handlerSend={send} handlerInput={handlerTextArea} text={textArea} />
+      <InputText sendMessage={send} />
     </>
   )
 }
