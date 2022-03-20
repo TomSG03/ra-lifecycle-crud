@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ra-lifecycle-crud/static/css/main.1db8901c.css",
-    "main.js": "/ra-lifecycle-crud/static/js/main.92060af4.js",
+    "main.js": "/ra-lifecycle-crud/static/js/main.9a3e3672.js",
     "static/js/787.04097c43.chunk.js": "/ra-lifecycle-crud/static/js/787.04097c43.chunk.js",
     "index.html": "/ra-lifecycle-crud/index.html",
     "main.1db8901c.css.map": "/ra-lifecycle-crud/static/css/main.1db8901c.css.map",
-    "main.92060af4.js.map": "/ra-lifecycle-crud/static/js/main.92060af4.js.map",
+    "main.9a3e3672.js.map": "/ra-lifecycle-crud/static/js/main.9a3e3672.js.map",
     "787.04097c43.chunk.js.map": "/ra-lifecycle-crud/static/js/787.04097c43.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1db8901c.css",
-    "static/js/main.92060af4.js"
+    "static/js/main.9a3e3672.js"
   ]
 }
