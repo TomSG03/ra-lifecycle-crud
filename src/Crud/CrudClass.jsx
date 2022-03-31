@@ -6,7 +6,7 @@ import ShowCards from './ShowCards';
 
 export default class Crud extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.url = props.url;
 
     this.state = {
